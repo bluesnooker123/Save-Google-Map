@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.8
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GMap_Image", "GMap_Image\GMap_Image.csproj", "{D65503E5-FB2C-4A7C-93C4-7CC8225C05E5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D65503E5-FB2C-4A7C-93C4-7CC8225C05E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D65503E5-FB2C-4A7C-93C4-7CC8225C05E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D65503E5-FB2C-4A7C-93C4-7CC8225C05E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D65503E5-FB2C-4A7C-93C4-7CC8225C05E5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {46B9A515-C3FB-4AEA-894D-957BE3A4051F}
+	EndGlobalSection
+EndGlobal
