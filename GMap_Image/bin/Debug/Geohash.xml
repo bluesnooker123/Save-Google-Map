@@ -1,0 +1,140 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Geohash</name>
+    </assembly>
+    <members>
+        <member name="T:Geohash.Direction">
+            <summary>
+            Direction
+            </summary>
+        </member>
+        <member name="F:Geohash.Direction.North">
+            <summary>
+            North
+            </summary>
+        </member>
+        <member name="F:Geohash.Direction.NorthEast">
+            <summary>
+            North East
+            </summary>
+        </member>
+        <member name="F:Geohash.Direction.East">
+            <summary>
+            East
+            </summary>
+        </member>
+        <member name="F:Geohash.Direction.SouthEast">
+            <summary>
+            South East
+            </summary>
+        </member>
+        <member name="F:Geohash.Direction.South">
+            <summary>
+            South
+            </summary>
+        </member>
+        <member name="F:Geohash.Direction.SouthWest">
+            <summary>
+            South West
+            </summary>
+        </member>
+        <member name="F:Geohash.Direction.West">
+            <summary>
+            West
+            </summary>
+        </member>
+        <member name="F:Geohash.Direction.NorthWest">
+            <summary>
+            North West
+            </summary>
+        </member>
+        <member name="T:Geohash.Geohasher">
+            <summary>
+            Geohasher 
+            </summary>
+        </member>
+        <member name="M:Geohash.Geohasher.Encode(System.Double,System.Double,System.Int32)">
+            <summary>
+            Encodes coordinates to a geohash string.
+            </summary>
+            <param name="latitude">latitude</param>
+            <param name="longitude">longitude</param>
+            <param name="precision">Length of the geohash. Must be between 1 and 12. Defaults to 6.</param>
+            <returns>The created geoash for the given coordinates.</returns>
+        </member>
+        <member name="M:Geohash.Geohasher.GetSubhashes(System.String)">
+            <summary>
+            Return the 32 subhashes for the given geohash string.
+            </summary>
+            <param name="geohash">geohash for which to get the subhashes.</param>
+            <returns>subhashes</returns>
+        </member>
+        <member name="M:Geohash.Geohasher.Decode(System.String)">
+            <summary>
+            Decodes a geohash to the corresponding coordinates.
+            </summary>
+            <param name="geohash">geohash for which to get the coordinates</param>
+            <returns>Tuple with latitude and longitude</returns>
+        </member>
+        <member name="M:Geohash.Geohasher.GetNeighbor(System.String,Geohash.Direction)">
+            <summary>
+            Returns the neighbor for a given geohash and directions.
+            </summary>
+            <param name="geohash">geohash for which to find the neighbor</param>
+            <param name="direction">direction of the neighbor</param>
+            <returns>geohash</returns>
+        </member>
+        <member name="M:Geohash.Geohasher.GetNeighbors(System.String)">
+            <summary>
+            Returns all neighbors for a given geohash.
+            </summary>
+            <param name="geohash">geohash for which to find the neighbors</param>
+            <returns>Dictionary with direction and geohash</returns>
+        </member>
+        <member name="M:Geohash.Geohasher.GetParent(System.String)">
+            <summary>
+            Returns the parent of the given geohash.
+            </summary>
+            <param name="geohash">geohash for which to get the parent.</param>
+            <returns>parent geohash</returns>
+        </member>
+        <member name="M:Geohash.Geohasher.GetBoundingBox(System.String)">
+            <summary>
+            returns the bounding box for the given geoash
+            </summary>
+            <param name="geohash">geohash for which to get the bounding box</param>
+            <returns>bounding box as double[] containing latInterval[0], latInterval[1], lonInterval[0], lonInterval[1]</returns>
+        </member>
+        <member name="M:Geohash.Geohasher.GetHashesAsync(NetTopologySuite.Geometries.Polygon,System.Int32,Geohash.Mode,System.IProgress{Geohash.HashingProgress})">
+            <summary>
+            Return Hashes for a given polygon
+            </summary>
+            <param name="polygon">Polygon for which to create hashes</param>
+            <param name="precision">Precision of the hashes, defaults to 6</param>
+            <param name="mode">Fill Mode for the hashes</param>
+            <param name="progress">Allows reporting progress</param>
+            <returns></returns>
+        </member>
+        <member name="T:Geohash.HashingProgress">
+            <summary>
+            Reports the progress of hashing polygons
+            </summary>
+        </member>
+        <member name="P:Geohash.HashingProgress.QueueSize">
+            <summary>
+            Remaining Queue Size
+            </summary>
+        </member>
+        <member name="P:Geohash.HashingProgress.HashesProcessed">
+            <summary>
+            Number of hashes processed
+            </summary>
+        </member>
+        <member name="P:Geohash.HashingProgress.RunningSince">
+            <summary>
+            Return the timespan since starting the hashing opertation
+            </summary>
+        </member>
+    </members>
+</doc>
